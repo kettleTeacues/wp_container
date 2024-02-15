@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: ubuntu_wp
+    restart: unless-stopped
+    # user: ${CON_USER:-1000:1000}
+    # volumes:
+    #   - /etc/group:/etc/group:ro
+    #   - /etc/passwd:/etc/passwd:ro
+      # - ../logs/nginx:/var/log/nginx:rw
+    ports:
+      - "80:80"
+    # tty: true
+    # stdin_open: true
